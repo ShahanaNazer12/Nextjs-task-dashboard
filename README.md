@@ -61,3 +61,31 @@ task-dashboard/
 ├─ tsconfig.json
 ├─ tailwind.config.js
 ├─ README.md
+
+
+## Screenshots
+
+Login Page:  
+![Login](screenshots/LoginPage.png)
+
+Dashboard Page:  
+![Dashboard](screenshots/Dashboard.png)
+
+Create Task Modal:  
+![Task Modal](screenshots/CreateTaskForm.png)
+
+Edit Task Modal:
+![Task Modal](screenshots/EditTaskForm.png)
+
+DarkMode:
+![Task Modal](screenshots/DarkMode.png)
+
+SearchByStatus:
+![Task Modal](screenshots/SearchByStatus.png)
+
+SearchByTitle:
+![Task Modal](screenshots/SearchByTitle.png)
+
+
+
+
