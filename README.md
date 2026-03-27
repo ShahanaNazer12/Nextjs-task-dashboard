@@ -74,8 +74,7 @@ Dashboard Page:
 Create Task Modal:  
 ![Task Modal](screenshots/CreateTaskForm.png)
 
-Dashboard Page:  
-![Dashboard](screenshots/dashboard.png)
+
 
 Edit Task Modal:
 ![Task Modal](screenshots/EditTaskForm.png)
