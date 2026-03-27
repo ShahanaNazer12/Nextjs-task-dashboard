@@ -69,7 +69,7 @@ Login Page:
 ![Login](screenshots/LoginPage.png)
 
 Dashboard Page:  
-![Dashboard](screenshots/Dashboard.png)
+![Dashboard](screenshots/dashboard.png)
 
 Create Task Modal:  
 ![Task Modal](screenshots/CreateTaskForm.png)
