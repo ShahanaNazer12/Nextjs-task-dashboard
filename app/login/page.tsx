@@ -17,7 +17,7 @@ export default function LoginPage() {
       return;
     }
 
-    
+
     localStorage.setItem("user", username);
 
     router.push("/dashboard");

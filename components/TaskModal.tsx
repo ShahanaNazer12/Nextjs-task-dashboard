@@ -24,7 +24,7 @@ export default function TaskModal({
   const [status, setStatus] = useState<Task["status"]>("Todo");
   const [dueDate, setDueDate] = useState("");
 
-  
+
   useEffect(() => {
     if (editTask) {
       setTitle(editTask.title);
@@ -39,7 +39,7 @@ export default function TaskModal({
     }
   }, [editTask]);
 
- 
+
   const handleSubmit = () => {
     if (!title.trim()) {
       alert("Title is required");
@@ -67,35 +67,35 @@ export default function TaskModal({
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent className="space-y-4">
 
-        
+
         <DialogHeader>
           <DialogTitle>
             {editTask ? "Edit Task" : "Add Task"}
           </DialogTitle>
         </DialogHeader>
 
-       
+
         <Input
           placeholder="Task Title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
 
-        
+
         <Input
           placeholder="Description"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
 
-       
+
         <Input
           type="date"
           value={dueDate}
           onChange={(e) => setDueDate(e.target.value)}
         />
 
-       
+
         <select
           className="border p-2 w-full rounded"
           value={status}
@@ -108,7 +108,7 @@ export default function TaskModal({
           <option value="Completed">Completed</option>
         </select>
 
-        
+
         <Button onClick={handleSubmit}>
           {editTask ? "Update Task" : "Save Task"}
         </Button>

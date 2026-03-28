@@ -27,19 +27,19 @@ export default function Dashboard() {
   const [editTask, setEditTask] = useState<Task | null>(null);
   const [user, setUser] = useState<string | null>(null);
 
- 
+
   const [search, setSearch] = useState("");
   const [filterStatus, setFilterStatus] = useState("All");
   const [sortOrder, setSortOrder] = useState("asc");
 
-  
+
   const [currentPage, setCurrentPage] = useState(1);
   const tasksPerPage = 5;
 
-  
+
   const { theme, setTheme } = useTheme();
 
-  
+
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
 
@@ -51,7 +51,7 @@ export default function Dashboard() {
     }
   }, [router]);
 
-  
+
   const handleSave = (task: Task) => {
     let updatedTasks: Task[];
 
@@ -68,7 +68,7 @@ export default function Dashboard() {
     saveTasks(updatedTasks);
   };
 
-  
+
   const deleteTask = (id: string) => {
     const updatedTasks = tasks.filter((t) => t.id !== id);
     setTasks(updatedTasks);
@@ -81,7 +81,7 @@ export default function Dashboard() {
     setOpen(true);
   };
 
-  
+
   const changeStatus = (id: string, status: Task["status"]) => {
     const updatedTasks = tasks.map((t) =>
       t.id === id ? { ...t, status } : t
@@ -90,13 +90,13 @@ export default function Dashboard() {
     saveTasks(updatedTasks);
   };
 
- 
+
   const handleLogout = () => {
     localStorage.removeItem("user");
     router.push("/login");
   };
 
-  
+
   const filteredTasks = tasks
     .filter((task) => {
       const matchesSearch = task.title
@@ -117,7 +117,7 @@ export default function Dashboard() {
         : dateB - dateA;
     });
 
-  
+
   const indexOfLast = currentPage * tasksPerPage;
   const indexOfFirst = indexOfLast - tasksPerPage;
   const currentTasks = filteredTasks.slice(indexOfFirst, indexOfLast);
@@ -127,7 +127,7 @@ export default function Dashboard() {
   return (
     <div className="p-6">
 
-    
+
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-4">
         <div>
           <h1 className="text-2xl font-bold">Dashboard</h1>
@@ -146,7 +146,7 @@ export default function Dashboard() {
             + Add Task
           </Button>
 
-          
+
           <Button
             variant="outline"
             className="w-full sm:w-auto"
@@ -167,7 +167,7 @@ export default function Dashboard() {
         </div>
       </div>
 
-      
+
       <div className="flex flex-col sm:flex-row gap-4 mb-6">
 
         <Input
@@ -207,7 +207,7 @@ export default function Dashboard() {
 
       </div>
 
-     
+
       <TaskTable
         tasks={currentTasks}
         onDelete={deleteTask}
@@ -215,7 +215,7 @@ export default function Dashboard() {
         onStatusChange={changeStatus}
       />
 
-      
+
       <div className="flex justify-center items-center gap-4 mt-6">
         <Button
           disabled={currentPage === 1}
@@ -236,7 +236,7 @@ export default function Dashboard() {
         </Button>
       </div>
 
-     
+
       <TaskModal
         open={open}
         setOpen={setOpen}

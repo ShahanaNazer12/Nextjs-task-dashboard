@@ -31,23 +31,23 @@ export default function TaskTable({
         ) : (
           tasks.map((task: Task) => (
             <tr key={task.id} className="text-center">
-              
-              
+
+
               <td className="border p-2">{task.title}</td>
 
-             
+
               <td className="border p-2">
                 {task.description || "-"}
               </td>
 
-              
+
               <td className="border p-2">
                 {task.dueDate
                   ? new Date(task.dueDate).toLocaleDateString()
                   : "-"}
               </td>
 
-             
+
               <td className="border p-2">
                 <select
                   value={task.status}
@@ -65,7 +65,7 @@ export default function TaskTable({
                 </select>
               </td>
 
-             
+
               <td className="border p-2 space-x-2">
                 <Button onClick={() => onEdit(task)}>Edit</Button>
                 <Button

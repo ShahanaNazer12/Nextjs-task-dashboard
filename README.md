@@ -71,8 +71,10 @@ Login Page:
 Dashboard Page:  
 ![Dashboard](screenshots/dashboard.png)
 
+
 Create Task Modal:  
 ![Task Modal](screenshots/CreateTaskForm.png)
+
 
 
 
