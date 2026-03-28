@@ -69,9 +69,6 @@ Login Page:
 ![Login](screenshots/LoginPage.png)
 
 Dashboard Page:  
-![Dashboard](screenshots/dashboard.png)
-
-Dashboard Page:  
 ![Dashboard](screenshots/db.png)
 
 
