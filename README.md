@@ -82,14 +82,18 @@ Edit Task Modal:
 ![Task Modal](screenshots/EditTaskForm.png)
 
 DarkMode:
-![Task Modal](screenshots/DarkMode.png)
+![Dark Mode](screenshots/DarkMode.png)
 
-SearchByStatus:
-![Task Modal](screenshots/SearchByStatus.png)
+Filter by Status:
+![Filter Tasks](screenshots/SearchByStatus.png)
 
-SearchByTitle:
-![Task Modal](screenshots/SearchByTitle.png)
+Search by Title:
+![Search Tasks](screenshots/SearchByTitle.png)
 
+
+## Bonus Features
+- Pagination for tasks (implemented on dashboard)
+- Dark mode support
 
 
 
